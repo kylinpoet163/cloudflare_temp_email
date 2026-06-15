@@ -45,6 +45,8 @@ jobs:
               echo "Building with normal pages"
               pnpm build:pages
             fi
+            # 应急方案：只删除 workerd 文件
+            find . -name "workerd" -type f -delete
             cd ..
           fi
 
